@@ -33,7 +33,7 @@ body {
   background-color: var(--clr-very-dark-blue-1);
   font-family: "Outfit", sans-serif;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 img {
@@ -102,6 +102,7 @@ hr {
 .card-text {
   color: var(--clr-soft-blue);
   line-height: 1.44;
+  font-weight: 400;
 }
 
 .card-pub {

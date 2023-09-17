@@ -1,0 +1,164 @@
+:root {
+  /* Colors */
+
+  /* primary */
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  /* natural */
+  --clr-very-dark-blue-1: hsl(217, 54%, 11%);
+  --clr-very-dark-blue-2: hsl(216, 50%, 16%);
+  --clr-very-dark-blue-3: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-very-dark-blue-1);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border-color: var(--clr-very-dark-blue-3) transparent transparent transparent;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.card {
+  padding: 24px;
+  max-width: 350px;
+  border-radius: 15px;
+  background-color: var(--clr-very-dark-blue-2);
+  box-shadow: 0 0 33px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+  background-color: #00fff780;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card-img:hover::after {
+  opacity: 1;
+}
+
+.card-img img {
+  border-radius: 8px;
+}
+
+.card-content {
+  margin-top: 24px;
+}
+
+.card-title {
+  margin-bottom: 16px;
+  color: var(--clr-white);
+  font-size: 22px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.card-title:hover {
+  color: var(--clr-cyan);
+  cursor: default;
+}
+
+.card-text {
+  color: var(--clr-soft-blue);
+  line-height: 1.44;
+}
+
+.card-pub {
+  padding-block: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-pub > * {
+  display: flex;
+  align-items: center;
+}
+
+.card-pub > * img {
+  margin-right: 7px;
+}
+
+.card-pub > * span {
+  font-size: 16px;
+}
+
+.card-pub div:first-child span {
+  color: var(--clr-cyan);
+}
+
+.card-pub div:last-child span {
+  color: var(--clr-soft-blue);
+}
+
+.card-owner {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.card-owner img {
+  margin-right: 16px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-white);
+}
+
+.card-owner strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--clr-soft-blue);
+}
+
+.card-owner strong span {
+  color: var(--clr-white);
+  cursor: default;
+  transition: 0.3s;
+}
+
+.card-owner strong span:hover {
+  color: var(--clr-cyan);
+}
